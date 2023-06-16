@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class ModelResponsibilityService {
 
   baseUrl: String = environment.baseUrl;
-
+  
   constructor(private http: HttpClient) { }
 
   findAllModelResponsibilities():Observable<ModelResponsibility[]>{
