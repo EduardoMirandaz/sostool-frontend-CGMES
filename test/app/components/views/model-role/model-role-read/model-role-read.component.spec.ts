@@ -1,26 +1,26 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WorkspaceSingleComponent } from './workspace-single.component';
+import { ModelRoleReadComponent } from '../../../../../../src/app/components/views/model-role/model-role-read/model-role-read.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-describe('WorkspaceSingleComponent', () => {
-  let component: WorkspaceSingleComponent;
-  let fixture: ComponentFixture<WorkspaceSingleComponent>;
+describe('ModelRoleReadComponent', () => {
+  let component: ModelRoleReadComponent;
+  let fixture: ComponentFixture<ModelRoleReadComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WorkspaceSingleComponent ],
       imports: [
         RouterTestingModule,
-        HttpClientTestingModule 
-      ]
+        HttpClientTestingModule
+      ],
+      declarations: [ ModelRoleReadComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WorkspaceSingleComponent);
+    fixture = TestBed.createComponent(ModelRoleReadComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

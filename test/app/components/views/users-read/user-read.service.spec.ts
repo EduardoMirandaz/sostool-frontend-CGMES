@@ -1,11 +1,11 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ModelResponsibilityService } from './model-responsibility.service';
+import { UserReadService } from '../../../../../src/app/components/views/users-read/user-read.service';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-describe('ModelResponsibilityService', () => {
-  let service: ModelResponsibilityService;
+describe('UserReadService', () => {
+  let service: UserReadService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -14,7 +14,7 @@ describe('ModelResponsibilityService', () => {
         HttpClientTestingModule 
       ]
     }).compileComponents();
-    service = TestBed.inject(ModelResponsibilityService);
+    service = TestBed.inject(UserReadService);
   });
 
   it('should be created', () => {

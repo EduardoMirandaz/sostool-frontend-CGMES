@@ -1,28 +1,26 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TeamViewComponent } from './team-view.component';
+import { WorkspaceSingleComponent } from '../../../../../../src/app/components/views/workspace/workspace-single/workspace-single.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { WorkspaceSingleComponent } from '../workspace-single/workspace-single.component';
 
-describe('TeamViewComponent', () => {
-  let component: TeamViewComponent;
-  let fixture: ComponentFixture<TeamViewComponent>;
+describe('WorkspaceSingleComponent', () => {
+  let component: WorkspaceSingleComponent;
+  let fixture: ComponentFixture<WorkspaceSingleComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TeamViewComponent, WorkspaceSingleComponent ],
-      providers: [WorkspaceSingleComponent],
+      declarations: [ WorkspaceSingleComponent ],
       imports: [
         RouterTestingModule,
-        HttpClientTestingModule
+        HttpClientTestingModule 
       ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TeamViewComponent);
+    fixture = TestBed.createComponent(WorkspaceSingleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

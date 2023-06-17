@@ -1,20 +1,20 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ModelRoleService } from './model-role.service';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { ModelResponsibilityService } from 'src/app/components/views/model-responsibility/model-responsibility.service';
 
-describe('ModelRoleService', () => {
-  let service: ModelRoleService;
+describe('ModelResponsibilityService', () => {
+  let service: ModelResponsibilityService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
-        HttpClientTestingModule
+        HttpClientTestingModule 
       ]
     }).compileComponents();
-    service = TestBed.inject(ModelRoleService);
+    service = TestBed.inject(ModelResponsibilityService);
   });
 
   it('should be created', () => {

@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UsersReadComponent } from './users-read.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { UsersReadComponent } from 'src/app/components/views/users-read/users-read.component';
 
 describe('UsersReadComponent', () => {
   let component: UsersReadComponent;
