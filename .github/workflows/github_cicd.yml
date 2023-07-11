@@ -27,7 +27,7 @@ jobs:
         run: ng test --browsers ChromeHeadless --watch=false
   publish:
     name: Build and Push Docker Image
-    needs: build_job
+    needs: test
     runs-on: ubuntu-latest
 
     steps:
