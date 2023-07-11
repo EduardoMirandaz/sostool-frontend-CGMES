@@ -3,13 +3,11 @@ name: CI
 on:
   push:
     branches:
-      - ops
       - master
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -25,5 +23,22 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
-        run: ng build --prod
+      - name: Test
+        run: ng test --browsers ChromeHeadless --watch=false
+  publish:
+    name: Build and Push Docker Image
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Log into GitHub Container Registry
+        run: echo ${{ secrets.SOSTOOL_TOKEN }} | docker login ghcr.io -u eduardomirandaz --password-stdin
+        
+      - name: Build Docker image
+        run: docker build -t ghcr.io/eduardomirandaz/sostool-frontend-cgmes:1.0.1 .
+
+      - name: Push Docker image
+        run: docker push ghcr.io/eduardomirandaz/sostool-frontend-cgmes:1.0.1
